@@ -1,4 +1,4 @@
-# readme
+# readme.md
 # Getting-and-Cleaning-Data-Project 
 
 ## Instructions of the project
@@ -21,30 +21,31 @@ From the data set in step 4, creates a second, independent tidy data set with th
 
 
 ===============
-## The steps are: 
+## The steps that are taken by run_analysis.R are: 
 
 install and load the following  the libraries
-library(plyr)
-library(dplyr)
-library(reshape2)
+*library(plyr)
+*library(dplyr)
+*library(reshape2)
 
-## read the files into tables, 
-get headers to put into data table in the next step
-read data into table and assign header
-read as table for handling using either cbind/rbind or dplyr
-merge data together
-find col number that contains "mean"
-pull out the columns with indexed numbers that contain "mean"
-find col number that contains "std"
-pull out the columns with indexed numbers that containt "std"
-create a new df that has subjectID, activityID, and those with "mean" and "std"
-add in column with activity description by matching the activity labels
-Read all activities and their names and label the aproppriate columns 
-use dplyr inner_join to merge 2 tables with their common column = activityID
-because for wide format, the header has variables that is very non-intuitive and non-descriptive,
-need to convert them to long format. use melt from library (reshape)
-convert it to wide format and average the variables.
-Create a file with the new tidy dataset
+Followed by:
+*read the files into tables, 
+*get headers to put into data table in the next step
+*read data into table and assign header
+*read as table for handling using either cbind/rbind or dplyr
+*merge data together
+*find col number that contains "mean"
+*pull out the columns with indexed numbers that contain "mean"
+*find col number that contains "std"
+*pull out the columns with indexed numbers that containt "std"
+*create a new df that has subjectID, activityID, and those with "mean" and "std"
+*add in column with activity description by matching the activity labels
+*Read all activities and their names and label the aproppriate columns 
+*use dplyr inner_join to merge 2 tables with their common column = activityID
+*because for wide format, the header has variables that is very non-intuitive and non-descriptive,
+*need to convert them to long format. use melt from library (reshape)
+*convert it to wide format and average the variables.
+*Create a file with the new tidy dataset
 
 
-## the result is a clean data named "tidy_data_ave_variable.txt"
+the result is a clean data named "tidy_data_ave_variable.txt"
